@@ -1,10 +1,4 @@
-*
-{
-    box-sizing: border-box;
-    outline: solid 1px red;
-}
-
-footer {
-    margin: 1.5rem;
-    text-align: center;
+* {
+  box-sizing:border-box;
+  outline: solid 1px red;
 }
