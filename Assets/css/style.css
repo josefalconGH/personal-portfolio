@@ -64,6 +64,30 @@
 
   }
 
+  .contact-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .contact-info a {
+    font-size: 1em;
+    color: #333333;
+    position: relative;
+  }
+
+  .contact-info a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #333333;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+
 /* id selectors */
 
   #about {
@@ -75,5 +99,9 @@
   }
 
   #about p {
+
+  }
+
+  #contact {
 
   }
