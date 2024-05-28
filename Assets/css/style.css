@@ -1,4 +1,79 @@
 * {
   box-sizing:border-box;
   outline: solid 1px red;
+
+  padding: 0;
+  margin: 0;
 }
+
+/* semantic selectors */
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background: url('data:image/png;base64,/*base64-encoded-image-data*/') no-repeat center center;
+    background-size: cover;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+
+  main {
+    padding: 20px;
+  }
+  
+/* element selectors */
+
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+
+  nav ul li {
+    margin-left: 20px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    font-size: 1em;
+  }
+
+/* class selectors */
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .subtitle {
+
+  }
+
+  .subtitle h2 {
+
+  }
+
+  .content-section {
+
+  }
+
+/* id selectors */
+
+  #about {
+
+  }
+
+  #about h3, #work h3 {
+
+  }
+
+  #about p {
+
+  }
