@@ -109,6 +109,23 @@
     transform-origin: bottom left; /* start animate underline from bottom left */
   }
 
+  footer {
+    margin: 1.5rem;
+    text-align: center;
+  }
+  footer a {
+    /* reduce the size of the footer links */
+    font-size: 0.75rem;
+  }
+
+  footer h3 {
+    font-family: brandon-grotesque, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 0px;
+    color: var(--accent);
+  }
+
 /* class selectors */
 
   .header-content {
