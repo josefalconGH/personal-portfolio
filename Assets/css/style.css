@@ -51,6 +51,17 @@
     min-width: fit-content; /* fit-content so that h1 will wrap only when absolutely necessary, i.e. content doesn't fit */
   }
 
+  h2 {
+    /* font styling */
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif; /* font style for h2 */
+    color: var(--accent);
+    text-align: right; 
+    font-size: 1rem; 
+    font-weight: 900; 
+
+    min-width: fit-content; /* fit-content so that h2 will wrap only when absolutely necessary, i.e. content doesn't fit */
+  }
+
   main {
     padding: 20px;
   }
@@ -126,17 +137,40 @@
   }
 
   .subtitle {
-    /* font styling */
-    font-family: brandon-grotesque, Helvetica, sans-serif;
-    color: var(--accent);
+
   }
 
-  .subtitle h2 {
-
+  /* grid layout for content */
+  .container {
+    width: 92%; /* width of container */
+    padding-bottom: 120px; /* padding for footer */
+    margin: 40px auto 0px auto; 
+    display: grid; /* grid layout for content */
+    grid-template-columns: 16% 76%; /* grid columns */
+    gap: 4%; /* gap between columns */
   }
 
   .content-section {
+    border-right: 2px solid var(--accent); /* border right for content section */
+    font-size: 40px;
+    text-align: end;
+    padding-right: 10px;
+  }
 
+/* CHANGES HERE */
+  /* flexbox for about section */
+  .about-container {
+    display: flex; /* flexbox for about section */
+    flex-wrap: wrap; /* wrap content */
+    align-items: flex-start; /* align items to top */
+  }
+
+  .about-text {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif; /* font style for about text */
+    font-size: 0.5rem;
+    color: var(--accent);
+    line-height: 1.25;
+    letter-spacing: 0.2px;
   }
 
   .contact-info {
@@ -186,16 +220,13 @@
 
   /* Mobile devices (up to 600px) */
   @media (max-width: 600px) {
-    h1 {
-      
+    .about-container {
+      flex-direction: column; /* column layout for mobile */
     }
 
-    .header-content::before {
-      
-    }
-
-    .subtitle p {
-      
+    .about-container h3 {
+      margin-right: 0;
+      margin-bottom: 10px;
     }
   }
 
