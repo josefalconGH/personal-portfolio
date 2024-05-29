@@ -45,7 +45,7 @@
     background-color: var(--accent);
     padding: 5px 15px; /* padding for h1 background */
     max-width: 100%; /* max width of h1 background */
-    width: 50%;
+    width: 70%;
     height: 40px;
   }
 
@@ -64,7 +64,8 @@
   }
 
   nav ul li {
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   nav ul li a {
