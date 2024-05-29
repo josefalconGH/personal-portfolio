@@ -47,6 +47,8 @@
     max-width: 100%; /* max width of h1 background */
     width: 70%;
     height: 40px;
+
+    min-width: fit-content; /* fit-content so that h1 will wrap only when absolutely necessary, i.e. content doesn't fit */
   }
 
   main {
