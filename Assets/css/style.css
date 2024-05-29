@@ -15,10 +15,6 @@
 
 /* semantic selectors */
 
-  body {
-
-  }
-
   header {
     background-color: var(--background);
     padding: 20px 0;
@@ -123,19 +119,6 @@
     position: relative; 
   }
 
-    /* box behind h1 */
-  .header-content::before {
-    /* content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 32%;
-    height: 32px;
-    background-color: var(--accent);
-    z-index: 0; */
-  }
-
   .subtitle {
 
   }
@@ -144,7 +127,7 @@
   .container {
     width: 92%; /* width of container */
     padding-bottom: 120px; /* padding for footer */
-    margin: 40px auto 0px auto; 
+    margin: 5px auto 0px auto; 
     display: grid; /* grid layout for content */
     grid-template-columns: 16% 76%; /* grid columns */
     gap: 4%; /* gap between columns */
@@ -168,52 +151,57 @@
   .about-text {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif; /* font style for about text */
     font-size: 0.5rem;
+    letter-spacing: 0.2px;
     color: var(--accent);
     line-height: 1.25;
-    letter-spacing: 0.2px;
   }
 
-  .contact-info {
+  .contact-text {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap; /* wrap nav items */
     align-items: center;
     padding: 10px 0;
   }
 
-  .contact-info a {
-    font-size: 1em;
-    color: #333333;
-    text-decoration: none;
-    position: relative;
+  .contact-text section ul li {
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
-  .contact-info a::after {
-    content: "";
-    display: block;
+  .contact-text section ul li a {
+    position: relative;
+
+    /* font styling */
+    text-decoration: none;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif; /* font style for contact text */
+    font-size: 0.5rem;
+    letter-spacing: 0.2px;
+    color: var(--accent);
+
+    margin-left: 0px;
+  }
+
+  .contact-text section ul li a::after {
+    content: ''; /* add pseudo element */
+    position: absolute; /* tie undeline to the psuedo element */
     width: 100%;
     height: 1px;
-    background-color: #333333;
-    position: absolute;
-    bottom: -5px;
+    background-color: var(--accent);
+    bottom: -2px;
     left: 0;
   }
 
-/* id selectors */
-
-  #about {
-
+  .contact-text section ul li a:hover::after {
+    transform: scaleX(1); /* hide underline for transition on hover */
+    transform-origin: bottom right; /* start animate underline to bottom right */
   }
 
-  #about h3, #work h3 {
-
-  }
-
-  #about p {
-
-  }
-
-  #contact {
-
+  .contact-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 0px;
   }
 
 /* Media Queries */
