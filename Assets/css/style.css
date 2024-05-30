@@ -124,11 +124,11 @@
     bottom: 30px;
   }
 
-/* class selectors */
+  /* class selectors */
 
   .header-content {
     display: flex; /* flexbox for header */
-    flex-direction: column; /* column layout fopr mobile first apprach */
+    flex-direction: column; /* column layout for mobile first apprach */
     align-items: center; /* center content */
     padding: 0 20px;
     position: relative; 
@@ -157,13 +157,13 @@
     right: 5%;
   }
 
-  /* grid container for work content */
+  /* grid container for content */
   .container {
-    width: 92%; /* width of container */
+    width: 100%; /* width of container */
     padding-bottom: 120px; /* padding for footer */
     margin: 5px auto 0px auto; 
     display: grid; /* grid layout for content */
-    grid-template-columns: 16% 76%; /* grid columns */
+    grid-template-columns: 18% 76%; /* grid columns */
     gap: 4%; /* gap between columns */
   }
 
@@ -221,6 +221,10 @@
     background-color: var(--accent);
     bottom: -2px;
     left: 0;
+
+    transform: scaleX(0); /* hide underline for transition on hover */
+    transform-origin: bottom left; /* end animate underline to bottom right */
+    transition: transform 0.3s ease-out; /* animate underline */
   }
 
   .contact-text section ul li a:hover::after {
@@ -253,7 +257,8 @@
     grid-area: portfolio-sub04;
   }
 
-/* id selectors */
+  /* id selectors */
+
   #work-content {
     width: 100%;
     display: grid;
@@ -286,24 +291,209 @@
 
 /* Media Queries */
 
-  /* Mobile devices (up to 600px) */
-  @media (max-width: 600px) {
-    .about-container {
-      flex-direction: column; /* column layout for mobile */
-    }
+  /* Mobile devices (from 600px to 1024px) */
+  @media ((min-width: 600px) and (max-width: 1199px)) {
 
-    .about-container h3 {
-      margin-right: 0;
-      margin-bottom: 10px;
-    }
-  }
-
-  /* Tablet devices (601px to 1024px) */
-  @media (min-width: 601px) and (max-width: 1024px) {
+    h1 {
+      /* font styling */
+      font-size: 3rem;
   
+      /* box background for h1 element */
+      padding: 5px 15px; /* padding for h1 background */
+      max-width: 100%; /* max width of h1 background */
+      width: 70%;
+      height: 60px;
+    }
+  
+    h2 {
+      /* font styling */
+      font-size: 1.75rem; 
+    }
+
+    nav ul li a {
+      /* font styling */
+      font-size: 1.1rem;
+    }
+
+    /* class selectors */
+
+    /* hero background */
+    .hero-banner {
+      background-image: url("../images/hero-bg.jpeg");
+      height: 200px; /* height of hero banner */
+    }
+
+    .hero-banner h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      padding: 5px 15px;
+    }
+
+    .content-section {
+      border-right: 3px solid var(--accent); /* border right for content section */
+      font-size: 60px;
+      padding-right: 25px; /* padding right for content section */
+    }
+
+    .about-text {
+      font-size: 1.1rem;
+      letter-spacing: 0;
+    }
+
+    .contact-text section ul li a {
+
+      /* font styling */
+      font-size: 1.1rem;
+      font-weight: 900;
+
+      margin-left: 0px;
+    }
+
+    .contact-text section ul li a::after {
+      height: 2px;
+      bottom: -3px;
+
+      transform: scaleX(0); /* hide underline for transition on hover */
+      transform-origin: bottom left; /* end animate underline to bottom right */
+      transition: transform 0.3s ease-out; /* animate underline */
+    }
+
+    .contact-text section ul li a:hover::after {
+      transform: scaleX(1); /* hide underline for transition on hover */
+      transform-origin: bottom left; /* start animate underline to bottom right */
+    }
   }
 
-  /* Desktop devices (1025px and above) */
-  @media (min-width: 1025px) {
+  /* Desktop devices (1115px and above) */
+  @media (min-width: 1200px) {
+
+    h1 {
+      /* font styling */
+      font-size: 4rem;
+  
+      /* box background for h1 element */
+      padding-left: 75px;
+      padding-right: 25px;
+      padding-top: 10px; 
+      max-width: 100%; 
+      width: 30%;
+      height: 88px;
+    }
+
+    h2 {
+      /* font styling */
+      font-size: 2rem;
+    }
+
+    nav ul {
+      list-style: none; /* remove bullet points */
+      display: flex; /* flexbox for nav */
+      flex-wrap: wrap; /* wrap nav items */
+      justify-content: center;
+      width: 100%; 
+
+      margin-right: 50px;
+    }
+  
+    nav ul li {
+      margin-left: 10px; /* margin left for list items */
+      margin-right: 10px; /* margin right for list items */
+    }
+  
+    nav ul li a {
+      position: relative; /* position relative for pseudo element */
+  
+      /* font styling */
+      text-decoration: none; /* remove default underline */
+      font-family: brandon-grotesque, Helvetica, sans-serif; /* font style for nav items */
+      font-size: 1.25rem;
+      font-weight: 900;
+      letter-spacing: 0.75px;
+      line-height: 50px;
+      text-transform: uppercase; /* uppercase text */
+      color: var(--accent);
+    }
+  
+    nav ul li a::after {
+      content: ''; /* add pseudo element */
+      position: absolute; /* tie undeline to the psuedo element */
+      width: 100%;
+      height: 3px;
+      background-color: var(--accent);
+      bottom: -3px;
+      left: 0;
+      transform: scaleX(0); /* hide underline for transition on hover */
+      transform-origin: bottom right; /* end animate underline to bottom right */
+      transition: transform 0.3s ease-out; /* animate underline */
+    }
+  
+    nav ul li a:hover::after {
+      transform: scaleX(1); /* show underline */
+      transform-origin: bottom left; /* start animate underline from bottom left */
+    }
+
+  /* class selectors */
+
+    .header-content {
+      width: 100%;
+      padding: 30px 0;
+      display: flex; 
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+      /* hero background */
+    .hero-banner {
+      background-image: url("../images/hero-bg.jpeg");
+      height: 250px; /* height of hero banner */
+    }
+
+    .hero-banner h2 {
+      font-size: 4rem;
+      font-weight: 700;
+      padding: 5px 20px;
+    }
+
+    /* grid container for content */
+    .container {
+      width: 95%; /* width of container */
+      grid-template-columns: 16% 76%; /* grid columns */
+      gap: 3%; /* gap between columns */
+    }
+
+    .content-section {
+      border-right: 3px solid var(--accent); /* border right for content section */
+      font-size: 30px;
+      padding-right: 25px; /* padding right for content section */
+    }
+
+    .about-text {
+      font-size: 1.25rem;
+      letter-spacing: 0;
+    }
+
+    .contact-text section ul li a {
+
+      /* font styling */
+      font-size: 1.1rem;
+      font-weight: 900;
+
+      margin-left: 0px;
+    }
+
+    .contact-text section ul li a::after {
+      height: 2px;
+      bottom: -3px;
+
+      transform: scaleX(0); /* hide underline for transition on hover */
+      transform-origin: bottom left; /* end animate underline to bottom right */
+      transition: transform 0.3s ease-out; /* animate underline */
+    }
+
+    .contact-text section ul li a:hover::after {
+      transform: scaleX(1); /* hide underline for transition on hover */
+      transform-origin: bottom left; /* start animate underline to bottom right */
+    }
 
   }
