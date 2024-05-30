@@ -2,7 +2,7 @@
 
 ## Description
 
-This portfolio template project serves as a comprehensive showcase of about-info, work, and contact-info. The portfolio is structured to be clearly visible and easy to navigate. Navigation is allowed through the nav elements that direct the viewer to respective secctions of the portfolio. The main motivation behind creating this template is to give myself, and people looking for a portffolio template a good starting point. This template also showcases the ability to follow a template and implement the design from scratch.
+This portfolio template project serves as a comprehensive showcase of about-info, work, and contact-info. The portfolio is structured to be clearly visible and easy to navigate. Navigation is allowed through the nav elements that direct the viewer to respective sections of the portfolio. The main motivation behind creating this template is to give myself, and people looking for a portffolio template a good starting point. This template also showcases the ability to follow a template and implement the design from scratch.
 
 ## Learning Outcomes
 
