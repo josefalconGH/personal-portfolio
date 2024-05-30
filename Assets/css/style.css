@@ -136,7 +136,7 @@
 
   /* hero background */
   .hero-banner {
-    background-image: url("../images/zhero-bg.jpeg");
+    background-image: url("../images/hero-bg.jpeg");
     background-position: top; /* position background image */
     background-size: cover; /* cover means image will cover the entire container */
     background-attachment: fixed; /* fixed background image */
