@@ -12,12 +12,14 @@ This portfolio template project serves as a comprehensive showcase of about-info
 
 ## Mock-Up
 
-```md
+The portfolio template can be viewed at: https://josefalcongh.github.io/personal-portfolio/
+
+
 ![mock-up01](./Assets/images/mock-up01.png)
-```
-```md
+
+
 ![mock-up02](./Assets/images/mock-up02.png)
-```
+
 
 ## License
 
